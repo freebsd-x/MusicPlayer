@@ -1,0 +1,16 @@
+{
+  "name": "Music",
+  "version": "1.0.0",
+  "identifier": "com.freebsdx.musicplayer",
+  "executable": "bin/musicplayer",
+  "icon": "Resources/icon.svg",
+  "permissions": [
+    "com.freebsdx.permission.UI"
+  ],
+  "mime_types": [
+    "audio/mpeg",
+    "audio/flac",
+    "audio/wav",
+    "audio/ogg"
+  ]
+}
