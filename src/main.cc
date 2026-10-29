@@ -627,8 +627,9 @@ int main(int argc, char* argv[]) {
             });
 
             // ── Load files from command line ─────────────────────────────────
+            // Every file argument; xshell's "--open" flag itself isn't a track.
             for (int i = 1; i < saved_argc; ++i)
-                playlist->push_back(extractMeta(saved_argv[i]));
+                if (saved_argv[i][0] != '-') playlist->push_back(extractMeta(saved_argv[i]));
             if (*rebuild_list) (*rebuild_list)();
             if (!playlist->empty() && *play_track) (*play_track)(0);
         });
